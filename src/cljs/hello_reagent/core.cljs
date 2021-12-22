@@ -32,7 +32,9 @@
      [:h1 "Welcome to hello-reagent"]
      [:ul
       [:li [:a {:href (path-for :items)} "Items of hello-reagent"]]
-      [:li [:a {:href "/broken/link"} "Broken link"]]]]))
+      ; [:li [:a {:href "/broken/link"} "Broken link"]]
+
+      ]]))
 
 
 
