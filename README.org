@@ -1,0 +1,11 @@
+#+STARTUP: inlineimages logdone
+#+STARTUP: overview
+#+TITLE: Reagent Spike Project
+
+* How to start
+
+#+begin_src bash
+lein figwheel
+#+end_src
+
+* 
