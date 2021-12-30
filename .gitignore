@@ -18,3 +18,5 @@ pom.xml.asc
 /resources/public/js/
 .rebel_readline_history
 *.org~
+.idea/
+hello-reagent.iml
