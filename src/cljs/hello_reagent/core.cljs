@@ -59,7 +59,9 @@
 
 (defn about-page []
   (fn [] [:span.main
-          [:h1 "About hello-reagent"]]))
+          [:h1 "Writing Process Template"]
+          [:p "I will use this project to improve the novel-writing process."]
+          ]))
 
 
 ;; -------------------------
