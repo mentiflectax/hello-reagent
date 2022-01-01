@@ -10,6 +10,9 @@
     )
   )
 
+;; Thinking place (start)
+;; Thinking place (end)
+
 ;; -------------------------
 ;; Routes
 
@@ -19,6 +22,9 @@
      ["/items"
       ["" :items]
       ["/:item-id" :item]]
+     ["/process" :process]
+     ["/work" :work]
+     ["/mondata" :monitoring-data]
      ["/about" :about]]))
 
 (defn path-for [route & [params]]
@@ -36,10 +42,13 @@
           working-title (:working-title work)]
       [:span.main
        [:h1 (str working-title)]
+       [:p "На этой странице находятся все данные по роману \"Белые Ниггеры 2\""]
        [:ul
+        [:li [:a {:href (path-for :process)} "Process"]]
+        [:li [:a {:href (path-for :work)} "Work"]]
+        [:li [:a {:href (path-for :monitoring-data)} "Monitoring Data"]]
         [:li [:a {:href (path-for :items)} "Items of hello-reagent"]]
         ; [:li [:a {:href "/broken/link"} "Broken link"]]
-
         ]]
       )
     ))
@@ -64,6 +73,23 @@
        [:h1 (str "Item " item " of hello-reagent")]
        [:p [:a {:href (path-for :items)} "Back to the list of items"]]])))
 
+(defn process-page []
+  (fn [] [:span.main
+          [:h1 "Process"]
+          [:p "TODO"]
+          ]))
+
+(defn work-page []
+  (fn [] [:span.main
+          [:h1 "Work"]
+          [:p "TODO"]
+          ]))
+
+(defn monitoring-data-page []
+  (fn [] [:span.main
+          [:h1 "Monitoring Data"]
+          [:p "TODO"]
+          ]))
 
 (defn about-page []
   (fn [] [:span.main
@@ -80,7 +106,10 @@
     :index #'home-page
     :about #'about-page
     :items #'items-page
-    :item #'item-page))
+    :item #'item-page
+    :process #'process-page
+    :work #'work-page
+    :monitoring-data #'monitoring-data-page))
 
 
 ;; -------------------------
@@ -98,7 +127,7 @@
          [:a {:href (path-for :about)} "About hello-reagent"]]]
        [page]
        [:footer
-        [:p "Copyright 2021--" current-year " (C) "
+        [:p "Copyright 2021-" current-year " (C) "
          [:a {:href "https://www.amazon.com/author/dpisarenko"}
           "Dmitrii Pisarenko"]
          ]
