@@ -93,11 +93,12 @@
           ]
       [:div
        [:header
+        ; Menu is here
         [:p [:a {:href (path-for :index)} "Home"] " | "
          [:a {:href (path-for :about)} "About hello-reagent"]]]
        [page]
        [:footer
-        [:p "Copyright 2021-" current-year " (C) "
+        [:p "Copyright 2021--" current-year " (C) "
          [:a {:href "https://www.amazon.com/author/dpisarenko"}
           "Dmitrii Pisarenko"]
          ]

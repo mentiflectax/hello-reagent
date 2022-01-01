@@ -19,7 +19,8 @@
                  [metosin/reitit "0.5.15"]
                  [pez/clerk "1.0.0"]
                  [venantius/accountant "0.2.5"
-                  :exclusions [org.clojure/tools.reader]]]
+                  :exclusions [org.clojure/tools.reader]]
+                 ]
 
   :jvm-opts ["-Xmx1G"]
   
