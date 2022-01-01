@@ -11,6 +11,7 @@
   )
 
 ;; Thinking place (start)
+; TODO: Add the title
 ;; Thinking place (end)
 
 ;; -------------------------
